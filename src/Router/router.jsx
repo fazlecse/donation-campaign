@@ -28,6 +28,10 @@ const router = createBrowserRouter([
         path: "/cards/:id",
         element: <CardDetails></CardDetails>,
       },
+      {
+        path: "/donation/:id",
+        element: <CardDetails></CardDetails>
+      },
     ],
   },
 ]);

@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+
 const DonationCard = ({ appliedDonation }) => {
+// const 
+
   const {
     id,
     Picture,
@@ -9,11 +13,16 @@ const DonationCard = ({ appliedDonation }) => {
     Text_Button_bg_Color,
     Price,
   } = appliedDonation || {};
+
   return (
     <div>
       <div className="card card-side bg-base-100 shadow-xl">
         <figure>
-          <img className="w-full h-full" src={Picture} alt="image" />
+          <img
+            className="w-full h-full object-cover"
+            src={Picture}
+            alt="image"
+          />
         </figure>
         <div className="p-5 w-full" style={{ backgroundColor: Card_bg_Color }}>
           <span
@@ -33,12 +42,14 @@ const DonationCard = ({ appliedDonation }) => {
           </h2>
           <p className="font-medium text-lg">${Price}</p>
           <div className="card-actions">
-            <button
-              className="btn text-white mt-5"
-              style={{ backgroundColor: Text_Button_bg_Color }}
-            >
-              View details
-            </button>
+            <Link to={`/donation/${id}`}>
+              <button
+                className="btn text-white mt-5"
+                style={{ backgroundColor: Text_Button_bg_Color }}
+              >
+                View details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
