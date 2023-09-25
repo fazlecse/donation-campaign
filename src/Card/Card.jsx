@@ -8,7 +8,7 @@ const Card = ({ card }) => {
       <Link to={`/cards/${id}`}>
         <div className="card bg-base-100 shadow-xl">
           <figure>
-            <img className="w-full" src={Picture} alt="Shoes" />
+            <img className="w-full" src={Picture} alt="image" />
           </figure>
           <div
             className="p-5 font-semibold"

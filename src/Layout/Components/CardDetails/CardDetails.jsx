@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-  import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { saveApplyDonation } from "../../../Utilities/LocalStorage";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -10,15 +12,15 @@ const CardDetails = () => {
     const response = await fetch("http://127.0.0.1:5173/cards.json");
     const cards = await response.json();
     const cardId = cards.find((card) => card.id === idInt);
-
     setCards(cardId);
   };
   useEffect(() => {
     loadCards();
   }, [id]);
-
-    console.log(cards);
-
+  const handleDonate = () => {
+    saveApplyDonation(idInt);
+    toast("Donation done!");
+  };
 
   return (
     <div className="container mx-auto py-10">
@@ -26,6 +28,7 @@ const CardDetails = () => {
         <img className="w-full" src={cards.Picture} alt="" />
         <div className="absolute bg-black w-full  bottom-0 left-0 z-10 opacity-80 py-10">
           <button
+            onClick={handleDonate}
             className="btn ml-10 text-white "
             style={{ backgroundColor: cards.Text_Button_bg_Color }}
           >
@@ -35,6 +38,7 @@ const CardDetails = () => {
       </figure>
       <h2 className="text-4xl mt-5 font-semibold">Title: {cards.Title}</h2>
       <p className="mt-5">{cards.Description}</p>
+      <ToastContainer />
     </div>
   );
 };
