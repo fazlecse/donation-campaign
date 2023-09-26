@@ -1,16 +1,8 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { PieChart, Pie, Cell } from "recharts";
 import { getStoredApplyDonation } from "../../../Utilities/LocalStorage";
-import localforage from "localforage";
 
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 },
-];
-
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+const COLORS = ["#FF444A", "#00C49F"];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({
@@ -34,28 +26,28 @@ const renderCustomizedLabel = ({
       textAnchor={x > cx ? "start" : "end"}
       dominantBaseline="central"
     >
-      {`${(percent * 100).toFixed(0)}%`}
+      {`${(percent * 100).toFixed(1)}%`}
     </text>
   );
 };
 
-const PieChartComponent = () => {
-  useEffect(() => {
-    const storedIds = getStoredApplyDonation();
-    // console.log(storedIds);
-
-  }, []);
+const PieChartComponent = ({ cards }) => {
+  const storedIds = getStoredApplyDonation();
+  const storedIdsPercents = (storedIds.length / cards.length) * 100;
+  const cardsPercents = 100 - storedIdsPercents;
+  const data = [
+    { name: "cardsPercents", value: cardsPercents },
+    { name: "storedIdsPercents", value: storedIdsPercents },
+  ];
 
   return (
-    <div>
-      <PieChart width={600} height={600}>
+    <div className="flex items-center justify-center">
+      <PieChart width={300} height={400}>
         <Pie
           data={data}
-          cx={200}
-          cy={200}
           labelLine={false}
           label={renderCustomizedLabel}
-          outerRadius={80}
+          outerRadius={120}
           fill="#8884d8"
           dataKey="value"
         >
