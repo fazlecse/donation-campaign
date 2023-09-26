@@ -1,8 +1,14 @@
+
+
+
+
+
+
 [
   {
     "id": 1,
-    "Picture": "https://i.ibb.co/vQfy450/Health.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/8K1MTm2/young-handsome-physician-medical-robe-with-stethoscope.jpg",
+    "Title": "The Importance of Balanced Nutrition",
     "Category": "Health",
     "Category_bg_Color": "#AEC8FF",
     "Card_bg_Color": "#D9E5FF",
@@ -12,8 +18,8 @@
   },
   {
     "id": 2,
-    "Picture": "https://i.ibb.co/vQfy450/Health.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/6BRVzGN/medical-banner-with-doctor-patient.jpg",
+    "Title": "Healthy Eating Habits for a Lifetime",
     "Category": "Health",
     "Category_bg_Color": "#AEC8FF",
     "Card_bg_Color": "#D9E5FF",
@@ -23,8 +29,8 @@
   },
   {
     "id": 3,
-    "Picture": "https://i.ibb.co/vQfy450/Health.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/MkhThqx/close-up-african-american-hand-holding-stethoscope.jpg",
+    "Title": "Understanding Macronutrients and Micronutrients",
     "Category": "Health",
     "Category_bg_Color": "#AEC8FF",
     "Card_bg_Color": "#D9E5FF",
@@ -34,8 +40,8 @@
   },
   {
     "id": 4,
-    "Picture": "https://i.ibb.co/mXkShd0/Education.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/yfpzmq1/pexels-mary-taylor-5896422.jpg",
+    "Title": "Importance of Early Childhood Education",
     "Category": "Education",
     "Category_bg_Color": "#FFC3C5",
     "Card_bg_Color": "#FFE3E4",
@@ -45,8 +51,8 @@
   },
   {
     "id": 5,
-    "Picture": "https://i.ibb.co/mXkShd0/Education.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/GvzqXSR/pexels-andrea-piacquadio-3755511.jpg",
+    "Title": "Preschool Curriculum and Activities",
     "Category": "Education",
     "Category_bg_Color": "#FFC3C5",
     "Card_bg_Color": "#FFE3E4",
@@ -56,8 +62,8 @@
   },
   {
     "id": 6,
-    "Picture": "https://i.ibb.co/mXkShd0/Education.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/kyppZmW/pexels-katerina-holmes-5905851.jpg",
+    "Title": "Effective Parenting in Early Childhood",
     "Category": "Education",
     "Category_bg_Color": "#FFC3C5",
     "Card_bg_Color": "#FFE3E4",
@@ -67,8 +73,8 @@
   },
   {
     "id": 7,
-    "Picture": "https://i.ibb.co/wgkSkJq/Clothing.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/McsdnfJ/pexels-tembela-bohle-1884583.jpg",
+    "Title": "Seasonal Fashion Trends",
     "Category": "Clothing",
     "Category_bg_Color": "#D4ECC1",
     "Card_bg_Color": "#EBF6E2",
@@ -78,8 +84,8 @@
   },
   {
     "id": 8,
-    "Picture": "https://i.ibb.co/wgkSkJq/Clothing.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/qDTJPb8/pexels-ksenia-chernaya-3965551.jpg",
+    "Title": "Sustainable Fashion Trends",
     "Category": "Clothing",
     "Category_bg_Color": "#D4ECC1",
     "Card_bg_Color": "#EBF6E2",
@@ -89,8 +95,8 @@
   },
   {
     "id": 9,
-    "Picture": "https://i.ibb.co/wgkSkJq/Clothing.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/qWpL8Bf/380466549-6631789153533360-406832222817904437-n.jpg",
+    "Title": "Vintage and Retro Fashion",
     "Category": "Clothing",
     "Category_bg_Color": "#D4ECC1",
     "Card_bg_Color": "#EBF6E2",
@@ -100,8 +106,8 @@
   },
   {
     "id": 10,
-    "Picture": "https://i.ibb.co/zsvqZCq/Food.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/YkvHkGt/pexels-spencer-davis-4393021.jpg",
+    "Title": "Cooking Fundamentals for Beginners",
     "Category": "Food",
     "Category_bg_Color": "#FDD2C4",
     "Card_bg_Color": "#FEEAE3",
@@ -111,8 +117,8 @@
   },
   {
     "id": 11,
-    "Picture": "https://i.ibb.co/zsvqZCq/Food.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/2YNj5HJ/pexels-engin-akyurt-2271107.jpg",
+    "Title": "Essential Kitchen Tools and Utensils",
     "Category": "Food",
     "Category_bg_Color": "#FDD2C4",
     "Card_bg_Color": "#FEEAE3",
@@ -122,8 +128,8 @@
   },
   {
     "id": 12,
-    "Picture": "https://i.ibb.co/zsvqZCq/Food.png",
-    "Title": "Clean water for children",
+    "Picture": "https://i.ibb.co/LdYZLHm/pexels-robin-stickel-70497.jpg",
+    "Title": "Common Cooking Techniques",
     "Category": "Food",
     "Category_bg_Color": "#FDD2C4",
     "Card_bg_Color": "#FEEAE3",
@@ -132,3 +138,7 @@
     "Price": 290.0
   }
 ]
+
+
+
+
