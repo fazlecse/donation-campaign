@@ -11,7 +11,7 @@ const Donation = () => {
   const [localStorageData, setLocalStorageData] = useState([]);
   useEffect(() => {
     const storedIds = getStoredApplyDonation();
-    console.log(storedIds);
+
     if (cards.length > 0) {
       const applyedDonations = cards.filter((card) =>
         storedIds.includes(card.id)
@@ -23,10 +23,10 @@ const Donation = () => {
     const storedIds = getStoredApplyDonation();
     setLocalStorageData(storedIds);
   }, []);
-  console.log(localStorageData.length);
+
   return (
-    <div className="container mx-auto ">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
+    <div className="container px-4 mx-auto ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 py-10">
         {appliedDonations.slice(0, dataLength).map((appliedDonation) => (
           <DonationCard
             key={appliedDonation.id}

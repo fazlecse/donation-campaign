@@ -1,8 +1,16 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Card = ({ card }) => {
-  const { id, Picture, Title, Category, Card_bg_Color, Category_bg_Color , Text_Button_bg_Color} =
-    card || {};
+  const {
+    id,
+    Picture,
+    Title,
+    Category,
+    Card_bg_Color,
+    Category_bg_Color,
+    Text_Button_bg_Color,
+  } = card || {};
   return (
     <div>
       <Link to={`/cards/${id}`}>
@@ -24,7 +32,8 @@ const Card = ({ card }) => {
               {Category}
             </span>
             <h2
-              className="card-title mt-4" style={{ color: Text_Button_bg_Color }}
+              className="card-title mt-4"
+              style={{ color: Text_Button_bg_Color }}
             >
               {Title}
             </h2>
@@ -34,5 +43,7 @@ const Card = ({ card }) => {
     </div>
   );
 };
-
+Card.propTypes = {
+  card: PropTypes.object.isRequired,
+};
 export default Card;

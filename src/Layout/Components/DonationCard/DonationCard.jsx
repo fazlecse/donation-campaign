@@ -1,8 +1,7 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const DonationCard = ({ appliedDonation }) => {
-// const 
-
   const {
     id,
     Picture,
@@ -16,7 +15,7 @@ const DonationCard = ({ appliedDonation }) => {
 
   return (
     <div>
-      <div className="card card-side bg-base-100 shadow-xl">
+      <div className="card sm:card-side bg-base-100 shadow-xl">
         <figure>
           <img
             className="w-full h-full object-cover"
@@ -56,5 +55,7 @@ const DonationCard = ({ appliedDonation }) => {
     </div>
   );
 };
-
+DonationCard.propTypes = {
+  appliedDonation:PropTypes.object.isRequired,
+};
 export default DonationCard;

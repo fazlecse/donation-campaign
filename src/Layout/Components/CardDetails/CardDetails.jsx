@@ -24,10 +24,10 @@ const CardDetails = () => {
 
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container px-4 mx-auto py-10">
       <figure className="relative">
         <img className="w-full" src={cards.Picture} alt="" />
-        <div className="absolute bg-black w-full  bottom-0 left-0 z-10 opacity-80 py-10">
+        <div className="absolute bg-black w-full  bottom-0 left-0 z-10 opacity-40 py-10">
           <button
             onClick={handleDonate}
             className="btn ml-10 text-white "

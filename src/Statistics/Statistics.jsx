@@ -5,7 +5,7 @@ const Statistics = () => {
     const cards = useLoaderData();
     
     return (
-      <div>
+      <div className="mb-10">
         <PieChartComponent cards={cards}></PieChartComponent>
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center text-xl font-medium">
           <div className="flex items-center gap-5">

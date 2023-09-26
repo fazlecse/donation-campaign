@@ -1,4 +1,5 @@
-import bgImage from "../../../assets/banner-bg.png"
+import PropTypes from "prop-types";
+import bgImage from "../../../assets/banner-bg.png";
 const Banner = ({ handleSearchInputField }) => {
   return (
     <div
@@ -9,7 +10,7 @@ const Banner = ({ handleSearchInputField }) => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="container mx-auto text-center">
+      <div className="container px-4 mx-auto text-center">
         <h1 className="text-5xl text-black font-medium">
           I Grow By Helping People In Need
         </h1>
@@ -29,5 +30,7 @@ const Banner = ({ handleSearchInputField }) => {
     </div>
   );
 };
-
+Banner.propTypes = {
+  handleSearchInputField: PropTypes.func.isRequired,
+};
 export default Banner;
