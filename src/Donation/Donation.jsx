@@ -28,7 +28,8 @@ const Donation = () => {
       </div>
       <div
         className={`flex justify-center ${
-          dataLength === appliedDonations.length && "hidden"
+          (dataLength === appliedDonations.length && "hidden") ||
+          appliedDonations.length < 4 && "hidden"
         }`}
       >
         <button
