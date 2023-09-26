@@ -9,7 +9,7 @@ const CardDetails = () => {
   const idInt = parseInt(id);
   const [cards, setCards] = useState({});
   const loadCards = async () => {
-    const response = await fetch("http://127.0.0.1:5173/cards.json");
+    const response = await fetch("/cards.json");
     const cards = await response.json();
     const cardId = cards.find((card) => card.id === idInt);
     setCards(cardId);
@@ -21,6 +21,7 @@ const CardDetails = () => {
     saveApplyDonation(idInt);
     toast("Donation done!");
   };
+
 
   return (
     <div className="container mx-auto py-10">
