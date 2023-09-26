@@ -1,5 +1,5 @@
 import bgImage from "../../../assets/banner-bg.png"
-const Banner = () => {
+const Banner = ({ handleSearchInputField }) => {
   return (
     <div
       className="pt-32 pb-40 relative z-10"
@@ -16,6 +16,7 @@ const Banner = () => {
         <div className="form-control mt-10">
           <label className="input-group justify-center">
             <input
+              onChange={handleSearchInputField}
               type="text"
               placeholder="Search here...."
               className="input input-bordered"
