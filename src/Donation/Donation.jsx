@@ -2,13 +2,16 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredApplyDonation } from "../Utilities/LocalStorage";
 import DonationCard from "../Layout/Components/DonationCard/DonationCard";
+import NotFound from "../Layout/Components/NotFound/NotFound";
 
 const Donation = () => {
   const cards = useLoaderData();
   const [dataLength, setDataLength] = useState(4);
   const [appliedDonations, setAppliedDonations] = useState([]);
+  const [localStorageData, setLocalStorageData] = useState([]);
   useEffect(() => {
     const storedIds = getStoredApplyDonation();
+    console.log(storedIds);
     if (cards.length > 0) {
       const applyedDonations = cards.filter((card) =>
         storedIds.includes(card.id)
@@ -16,6 +19,11 @@ const Donation = () => {
       setAppliedDonations(applyedDonations);
     }
   }, [cards]);
+  useEffect(() => {
+    const storedIds = getStoredApplyDonation();
+    setLocalStorageData(storedIds);
+  }, []);
+  console.log(localStorageData.length);
   return (
     <div className="container mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
@@ -26,10 +34,13 @@ const Donation = () => {
           ></DonationCard>
         ))}
       </div>
+      <div className={` ${localStorageData.length && "hidden"}`}>
+        <NotFound></NotFound>
+      </div>
       <div
         className={`flex justify-center ${
           (dataLength === appliedDonations.length && "hidden") ||
-          appliedDonations.length < 4 && "hidden"
+          (appliedDonations.length < 4 && "hidden")
         }`}
       >
         <button
