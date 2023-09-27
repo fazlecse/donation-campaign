@@ -3,7 +3,7 @@ import bgImage from "../../../assets/banner-bg.png";
 const Banner = ({ handleSearchInputField }) => {
   return (
     <div
-      className="pt-32 pb-40 relative z-10"
+      className="pt-48 pb-40 relative z-10 -mt-14"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
